@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+
+[dev-packages]
+pylint = "*"
+autopep8 = "*"
+rope = "*"
+safety = "*"
+black = "*"
+pylint-django = "*"
+
+[requires]
+python_version = "3"
+
+[pipenv]
+allow_prereleases = true
