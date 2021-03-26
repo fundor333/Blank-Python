@@ -13,6 +13,7 @@ rope = "*"
 safety = "*"
 black = "*"
 pylint-django = "*"
+pre-commit = "*"
 
 [requires]
 python_version = "3"
