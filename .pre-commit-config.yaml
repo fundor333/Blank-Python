@@ -1,29 +1,37 @@
 fail_fast: true
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.3.0
-    hooks:
-      - id: check-toml
-      - id: check-yaml
-      - id: check-json
-      - id: check-xml
-      - id: pretty-format-json
-        args: [ "--autofix" ]
-      - id: end-of-file-fixer
-      - id: requirements-txt-fixer
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-        language: python
-  - repo: https://github.com/ambv/black
-    rev: 20.8b1
-    hooks:
-      - id: black
-        language_version: python3.8
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.4
-    hooks:
-      - id: flake8
-  - repo: https://github.com/asottile/blacken-docs
-    rev: v1.8.0
-    hooks:
-      - id: blacken-docs
+    -   repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v3.4.0
+        hooks:
+            -   id: check-merge-conflict
+            -   id: detect-aws-credentials
+            -   id: detect-private-key
+            -   id: python-no-eval
+            -   id: python-log-warn
+            -   id: python-use-type-annotations
+            -   id: check-symlinks
+            -   id: check-toml
+            -   id: check-xml
+            -   id: check-yaml
+            -   id: fix-encoding-pragma
+            -   id: forbid-new-submodules
+            -   id: mixed-line-ending
+            -   id: trailing-whitespace
+                language: python
+    -   repo: https://github.com/asottile/pyupgrade
+        rev: v2.11.0
+        hooks:
+            -   id: pyupgrade
+    -   repo: https://github.com/ambv/black
+        rev: 20.8b1
+        hooks:
+            -   id: black
+                language_version: python3.9
+    -   repo: https://gitlab.com/pycqa/flake8
+        rev: 3.9.0
+        hooks:
+            -   id: flake8
+    -   repo: https://github.com/asottile/blacken-docs
+        rev: v1.10.0
+        hooks:
+            -   id: blacken-docs
