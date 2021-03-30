@@ -24,6 +24,7 @@ repos:
         rev: v2.11.0
         hooks:
             -   id: pyupgrade
+                args: [--py36-plus]
     -   repo: https://github.com/ambv/black
         rev: 20.8b1
         hooks:
