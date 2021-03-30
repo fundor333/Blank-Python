@@ -4,11 +4,7 @@ repos:
         rev: v3.4.0
         hooks:
             -   id: check-merge-conflict
-            -   id: detect-aws-credentials
             -   id: detect-private-key
-            -   id: python-no-eval
-            -   id: python-log-warn
-            -   id: python-use-type-annotations
             -   id: check-symlinks
             -   id: check-toml
             -   id: check-xml
@@ -18,6 +14,12 @@ repos:
             -   id: mixed-line-ending
             -   id: trailing-whitespace
                 language: python
+    -   repo: https://github.com/pre-commit/pygrep-hooks
+        rev: v1.8.0  # Use the ref you want to point at
+        hooks:
+            -   id: python-no-eval
+            -   id: python-no-log-warn
+            -   id: python-use-type-annotations
     -   repo: https://github.com/asottile/pyupgrade
         rev: v2.11.0
         hooks:
