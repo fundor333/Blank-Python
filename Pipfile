@@ -9,14 +9,11 @@ name = "pypi"
 [dev-packages]
 pylint = "*"
 autopep8 = "*"
-rope = "*"
-safety = "*"
-black = "*"
-pylint-django = "*"
+flake8 = "*"
 pre-commit = "*"
 
 [requires]
-python_version = "3"
+python_version = "3.9"
 
 [pipenv]
 allow_prereleases = true
