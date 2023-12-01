@@ -1,0 +1,6 @@
+[flake8]
+ignore = E501, W503, F403, C901, B904
+max-line-length = 119
+max-complexity = 18
+select = B,C,E,F,W,T4,B9
+exclude = .git,*migrations*,.tox, .venv
