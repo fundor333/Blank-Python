@@ -42,3 +42,24 @@ deploy: ## make the deploy code
 
 precommit: ## Run pre-commit hooks
 	@git add . & uv run --env-file=.env --env-file=.env pre-commit run --all-files
+
+patch: ## Increment patch
+	@uv version --bump patch
+
+minor: ## Increment minor
+	@uv version --bump minor
+
+major: ## Increment major
+	@uv version --bump major
+
+alpha: ## Increment alpha
+	@uv version --bump alpha
+
+beta: ## Increment beta
+	@uv version --bump beta
+
+stable: ## Increment stable
+	@uv version --bump stable
+
+dev: ## Increment dev
+	@uv version --bump dev
