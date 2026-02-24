@@ -32,3 +32,8 @@ report_only = true              # Report only, always exit with zero.
 cache_dir = '.skylt_cache'      # Cache location (default: `~/.skjold/cache`).
 cache_expires = 86400           # Cache max. age.
 verbose = true                  # Be verbose.
+
+[tool.git-cliff.git]
+conventional_commits = true
+commit_parsers = []
+filter_commits = false
