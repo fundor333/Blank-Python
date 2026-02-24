@@ -63,3 +63,9 @@ stable: ## Increment stable
 
 dev: ## Increment dev
 	@uv version --bump dev
+
+.PHONY: changelog ## update CHANGELOG.md and amend it on the commit
+changelog:
+	@uv run git-cliff --config pyproject.toml --output CHANGELOG.md
+	@git add CHANGELOG.md
+	@git commit --amend --no-edit
